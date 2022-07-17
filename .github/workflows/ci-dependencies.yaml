@@ -1,35 +1,35 @@
-name: Dependencies - CI
-"on":
-  pull_request:
-    branches: 
-      - dev
-    paths:
-      - 'chat_dependencies/**'
+# name: Dependencies - CI
+# "on":
+#   pull_request:
+#     branches: 
+#       - dev
+#     paths:
+#       - 'chat_dependencies/**'
     
-jobs:
-  dependencies-ci:
-    runs-on: ubuntu-latest
-    env: 
-      working-directory: ./chat_dependencies
+# jobs:
+#   dependencies-ci:
+#     runs-on: ubuntu-latest
+#     env: 
+#       working-directory: ./chat_dependencies
     
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Flutter
-        uses: subosito/flutter-action@v2.2.1 
-        with:
-          flutter-version: '3.0.5'
-          channel: 'stable'
-      - name: Install dependencies
-        run: flutter pub get
-        working-directory: '${{ env.working-directory }}'
-      - name: Run analyzes
-        run: flutter analyze
-        working-directory: '${{ env.working-directory }}'
-      - name: Run test
-        run: flutter test --coverage --coverage-path ../coverage/lcov.info
-        working-directory: '${{ env.working-directory }}'
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Install Flutter
+#         uses: subosito/flutter-action@v2.2.1 
+#         with:
+#           flutter-version: '3.0.5'
+#           channel: 'stable'
+#       - name: Install dependencies
+#         run: flutter pub get
+#         working-directory: '${{ env.working-directory }}'
+#       - name: Run analyzes
+#         run: flutter analyze
+#         working-directory: '${{ env.working-directory }}'
+#       - name: Run test
+#         run: flutter test --coverage --coverage-path ../coverage/lcov.info
+#         working-directory: '${{ env.working-directory }}'
 
-      - name: Report Coverage
-        uses: codecov/codecov-action@v2.0.3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+#       - name: Report Coverage
+#         uses: codecov/codecov-action@v2.0.3
+#         with:
+#           token: ${{ secrets.CODECOV_TOKEN }}
