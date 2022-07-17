@@ -69,7 +69,7 @@ class _DwSearchTextFieldWidgetState extends State<DwSearchTextFieldWidget> {
           decoration: InputDecoration(
             isDense: true,
             hintText: ' Pesquisar...',
-            hintStyle: Theme.of(context).textTheme.subtitle1,
+            hintStyle: theme.textStyleTheme.searchAppBarTextStyle,
             border: InputBorder.none,
             suffixIconColor: theme.colorTheme.appBarIconColor,
             contentPadding: EdgeInsets.only(

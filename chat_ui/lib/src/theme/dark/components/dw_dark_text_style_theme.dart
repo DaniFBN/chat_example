@@ -6,6 +6,16 @@ import '../../interfaces/components/i_dw_text_style_theme.dart';
 class DwDarkTextStyleTheme implements IDwTextStyleTheme {
   const DwDarkTextStyleTheme();
 
+  
+  @override
+  TextStyle get searchAppBarTextStyle => const TextStyle(
+        color: Color(0xFFFFFFFF),
+        fontWeight: FontWeight.w600,
+        fontSize: 13,
+        fontFamily: DwConstants.kMulishFontFamily,
+        package: DwConstants.kPackageName,
+      );
+
   @override
   TextStyle get chatDateTextStyle => const TextStyle(
         color: Color(0xFFB3B9C9),
