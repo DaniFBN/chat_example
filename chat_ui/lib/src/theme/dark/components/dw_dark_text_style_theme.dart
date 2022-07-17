@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
 
+import '../../../utils/constants.dart';
 import '../../interfaces/components/i_dw_text_style_theme.dart';
 
 class DwDarkTextStyleTheme implements IDwTextStyleTheme {
   const DwDarkTextStyleTheme();
+
   
+  @override
+  TextStyle get searchAppBarTextStyle => const TextStyle(
+        color: Color(0xFFFFFFFF),
+        fontWeight: FontWeight.w600,
+        fontSize: 13,
+        fontFamily: DwConstants.kMulishFontFamily,
+        package: DwConstants.kPackageName,
+      );
+
   @override
   TextStyle get chatDateTextStyle => const TextStyle(
         color: Color(0xFFB3B9C9),
         fontWeight: FontWeight.w400,
         fontSize: 14,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -17,6 +30,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFB3B9C9),
         fontWeight: FontWeight.w400,
         fontSize: 14,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -24,6 +39,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFFFFFFF),
         fontWeight: FontWeight.w600,
         fontSize: 15,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -31,6 +48,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFFFFFFF),
         fontWeight: FontWeight.w400,
         fontSize: 14,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -38,6 +57,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFFFFFFF),
         fontWeight: FontWeight.w400,
         fontSize: 12,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -45,6 +66,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFFFFFFF),
         fontWeight: FontWeight.w600,
         fontSize: 20,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -52,6 +75,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0x73FFFFFF),
         fontWeight: FontWeight.w600,
         fontSize: 13,
+        fontFamily: DwConstants.kMulishFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -59,6 +84,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFFFFFFF),
         fontWeight: FontWeight.w400,
         fontSize: 16,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -66,6 +93,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0x94FFFFFF),
         fontWeight: FontWeight.w500,
         fontSize: 13,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override
@@ -73,6 +102,8 @@ class DwDarkTextStyleTheme implements IDwTextStyleTheme {
         color: Color(0xFFFFFFFF),
         fontWeight: FontWeight.w600,
         fontSize: 28,
+        fontFamily: DwConstants.kPoppinsFontFamily,
+        package: DwConstants.kPackageName,
       );
 
   @override

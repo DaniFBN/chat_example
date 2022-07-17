@@ -1,9 +1,11 @@
-
 import 'package:flutter/material.dart';
 
 abstract class IDwTextStyleTheme extends ThemeExtension<IDwTextStyleTheme> {
   /// AppBar text style to home page
   TextStyle get homeAppBarTextStyle;
+
+  /// Text style of search field in home page AppBar
+  TextStyle get searchAppBarTextStyle;
 
   /// Title text style to status bar
   TextStyle get statusTitleTextStyle;
