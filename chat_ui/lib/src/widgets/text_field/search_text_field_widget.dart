@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/interfaces/i_dw_theme_data.dart';
-import '../../utils/widget_scale.dart';
+import '../../utils/widget_scale_helper.dart';
 import '../icon/icon_widget.dart';
 
 class DwSearchTextFieldWidget extends StatefulWidget {
@@ -25,9 +25,6 @@ class DwSearchTextFieldWidget extends StatefulWidget {
 
 class _DwSearchTextFieldWidgetState extends State<DwSearchTextFieldWidget> {
   bool showClearButton = false;
-
-  static const defaultPadding = 8.0;
-  static const iconWidth = 24.0;
 
   @override
   void initState() {
@@ -61,6 +58,10 @@ class _DwSearchTextFieldWidgetState extends State<DwSearchTextFieldWidget> {
     final theme = Theme.of(context).extension<IDwThemeData>()!;
     final mediaQuery = MediaQuery.of(context);
     final textStyle = theme.textStyleTheme.searchAppBarTextStyle;
+    final responsiveTheme = theme.responsiveTheme;
+
+    final defaultPadding = mediaQuery.size.width * responsiveTheme.s8Percent;
+    final iconWidth = mediaQuery.size.width * responsiveTheme.s24Percent;
 
     return Stack(
       children: [
@@ -93,7 +94,7 @@ class _DwSearchTextFieldWidgetState extends State<DwSearchTextFieldWidget> {
                   onTap: widget.onCleared,
                   child: const DwIconWidget(icon: Icons.clear),
                 )
-              : Container(),
+              : const SizedBox.shrink(),
         ),
       ],
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/widget_scale.dart';
+import '../../utils/widget_scale_helper.dart';
 
 class DwResponsiveTextWidget extends StatelessWidget {
   const DwResponsiveTextWidget({

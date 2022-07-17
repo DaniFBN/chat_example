@@ -20,7 +20,7 @@ class DwAppBarMessageWidget extends StatelessWidget
   final void Function() onTapSearch;
 
   @override
-  Size get preferredSize => const Size.fromHeight(75);
+  Size get preferredSize => const Size.fromHeight(70);
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +33,8 @@ class DwAppBarMessageWidget extends StatelessWidget
       child: Row(
         children: [
           Container(
-            height: size.width * 0.102,
-            width: size.width * 0.102,
+            height: size.width * theme.responsiveTheme.s44Percent,
+            width: size.width * theme.responsiveTheme.s44Percent,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -43,7 +43,7 @@ class DwAppBarMessageWidget extends StatelessWidget
               ),
             ),
           ),
-          SizedBox(width: size.width * 0.028),
+          SizedBox(width: size.width * theme.responsiveTheme.s12Percent),
           DwResponsiveTextWidget(
             text: title,
             style: theme.textStyleTheme.messageAppBarTextStyle,

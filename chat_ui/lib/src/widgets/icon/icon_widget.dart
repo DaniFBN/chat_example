@@ -18,7 +18,7 @@ class DwIconWidget extends StatelessWidget {
     return Icon(
       icon,
       color: theme.colorTheme.appBarIconColor,
-      size: size.width * 0.056,
+      size: size.width * theme.responsiveTheme.s24Percent,
     );
   }
 }

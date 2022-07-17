@@ -57,8 +57,8 @@ class _InternalAppBarWidgetState extends State<InternalAppBarWidget>
         color: theme.colorTheme.backgroundColor,
         child: Padding(
           padding: EdgeInsets.symmetric(
-            vertical: size.width * 0.018,
-            horizontal: size.width * 0.056,
+            vertical: size.width * theme.responsiveTheme.s8Percent,
+            horizontal: size.width * theme.responsiveTheme.s24Percent,
           ),
           child: Row(
             children: [

@@ -18,7 +18,7 @@ class DwAppBarHomeWidget extends StatelessWidget
   final void Function() onTapSearch;
 
   @override
-  Size get preferredSize => const Size.fromHeight(75);
+  Size get preferredSize => const Size.fromHeight(70);
 
   @override
   Widget build(BuildContext context) {
