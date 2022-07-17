@@ -1,14 +1,14 @@
-name: CI
+name: APP - CI
 "on":
   pull_request:
     branches: 
       - dev
+    paths:
+      - 'chat_app/**'
     
 jobs:
   app-ci:
     runs-on: ubuntu-latest
-    paths:
-      - 'chat_app/**'
     env: 
       working-directory: ./chat_app
     
@@ -34,10 +34,17 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-  core-ci:
-    runs-on: ubuntu-latest
+name: Core - CI
+"on":
+  pull_request:
+    branches: 
+      - dev
     paths:
       - 'chat_core/**'
+    
+jobs:
+  core-ci:
+    runs-on: ubuntu-latest
     env: 
       working-directory: ./chat_core
     
@@ -63,10 +70,17 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
+name: Dependencies - CI
+"on":
+  pull_request:
+    branches: 
+      - dev
+    paths:
+      - 'dependencies_app/**'
+    
+jobs:
   dependencies-ci:
     runs-on: ubuntu-latest
-    paths:
-      - 'chat_dependencies/**'
     env: 
       working-directory: ./chat_dependencies
     
@@ -92,10 +106,17 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
-  ui-ci:
-    runs-on: ubuntu-latest
+name: UI - CI
+"on":
+  pull_request:
+    branches: 
+      - dev
     paths:
       - 'chat_ui/**'
+    
+jobs:
+  ui-ci:
+    runs-on: ubuntu-latest
     env: 
       working-directory: ./chat_ui
     
