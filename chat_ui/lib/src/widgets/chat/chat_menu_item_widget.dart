@@ -24,7 +24,6 @@ class DwChatMenuItemWidget extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: size.width * theme.responsiveTheme.s24Percent,
         vertical: size.width * theme.responsiveTheme.s12Percent,
       ),
       child: SizedBox(
