@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/interfaces/i_dw_theme_data.dart';
+import '../../utils/widget_scale.dart';
 import '../icon/icon_widget.dart';
 
 class DwSearchTextFieldWidget extends StatefulWidget {
@@ -58,6 +59,8 @@ class _DwSearchTextFieldWidgetState extends State<DwSearchTextFieldWidget> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).extension<IDwThemeData>()!;
+    final mediaQuery = MediaQuery.of(context);
+    final textStyle = theme.textStyleTheme.searchAppBarTextStyle;
 
     return Stack(
       children: [
@@ -69,7 +72,9 @@ class _DwSearchTextFieldWidgetState extends State<DwSearchTextFieldWidget> {
           decoration: InputDecoration(
             isDense: true,
             hintText: ' Pesquisar...',
-            hintStyle: theme.textStyleTheme.searchAppBarTextStyle,
+            hintStyle: textStyle.copyWith(
+              fontSize: mediaQuery.widgetScale(textStyle.fontSize ?? 14),
+            ),
             border: InputBorder.none,
             suffixIconColor: theme.colorTheme.appBarIconColor,
             contentPadding: EdgeInsets.only(

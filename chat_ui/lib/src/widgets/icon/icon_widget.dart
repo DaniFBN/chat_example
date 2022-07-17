@@ -12,12 +12,13 @@ class DwIconWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     final theme = Theme.of(context).extension<IDwThemeData>()!;
 
     return Icon(
       icon,
       color: theme.colorTheme.appBarIconColor,
-      size: 24,
+      size: size.width * 0.056,
     );
   }
 }

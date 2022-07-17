@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/interfaces/i_dw_theme_data.dart';
+import '../text/responsive_text_widget.dart';
 import 'internal_app_bar_widget.dart';
 
 class DwAppBarMessageWidget extends StatelessWidget
@@ -23,6 +24,7 @@ class DwAppBarMessageWidget extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     final theme = Theme.of(context).extension<IDwThemeData>()!;
 
     return InternalAppBarWidget(
@@ -31,8 +33,8 @@ class DwAppBarMessageWidget extends StatelessWidget
       child: Row(
         children: [
           Container(
-            height: 44,
-            width: 44,
+            height: size.width * 0.102,
+            width: size.width * 0.102,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -41,9 +43,9 @@ class DwAppBarMessageWidget extends StatelessWidget
               ),
             ),
           ),
-          const SizedBox(width: 12),
-          Text(
-            title,
+          SizedBox(width: size.width * 0.028),
+          DwResponsiveTextWidget(
+            text: title,
             style: theme.textStyleTheme.messageAppBarTextStyle,
           ),
         ],

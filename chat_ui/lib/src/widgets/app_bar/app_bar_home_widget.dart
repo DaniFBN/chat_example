@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/interfaces/i_dw_theme_data.dart';
+import '../text/responsive_text_widget.dart';
 import 'internal_app_bar_widget.dart';
 
 class DwAppBarHomeWidget extends StatelessWidget
@@ -26,8 +27,8 @@ class DwAppBarHomeWidget extends StatelessWidget
     return InternalAppBarWidget(
       searchController: searchController,
       onTapSearch: onTapSearch,
-      child: Text(
-        title,
+      child: DwResponsiveTextWidget(
+        text: title,
         style: theme.textStyleTheme.homeAppBarTextStyle,
       ),
     );
