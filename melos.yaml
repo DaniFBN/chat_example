@@ -1,0 +1,7 @@
+name: Chat
+
+packages:
+  - chat_app/*
+  - chat_core/*
+  - chat_dependencies/*
+  - chat_ui/*
