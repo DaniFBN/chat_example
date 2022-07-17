@@ -26,5 +26,10 @@ jobs:
         run: flutter analyze
         working-directory: '${{ env.working-directory }}'
       - name: Run test
-        run: flutter test
+        run: flutter test --coverage --coverage-path ../coverage/lcov.info
         working-directory: '${{ env.working-directory }}'
+
+      - name: Report Coverage
+        uses: codecov/codecov-action@v2.0.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
