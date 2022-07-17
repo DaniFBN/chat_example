@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chat_app/melos_chat_app.iml" filepath="$PROJECT_DIR$/chat_app/melos_chat_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_core/melos_chat_core.iml" filepath="$PROJECT_DIR$/chat_core/melos_chat_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_dependencies/melos_chat_dependencies.iml" filepath="$PROJECT_DIR$/chat_dependencies/melos_chat_dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_ui/melos_chat_ui.iml" filepath="$PROJECT_DIR$/chat_ui/melos_chat_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat_ui\\example/melos_example.iml" filepath="$PROJECT_DIR$/chat_ui\\example/melos_example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_chat.iml" filepath="$PROJECT_DIR$/melos_chat.iml" />
+    </modules>
+  </component>
+</project>
