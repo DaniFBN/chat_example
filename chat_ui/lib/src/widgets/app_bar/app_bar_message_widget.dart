@@ -37,6 +37,12 @@ class DwAppBarMessageWidget extends StatelessWidget
             width: size.width * theme.responsiveTheme.s44Percent,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: theme.colorTheme.shadowImageColor,
+                  blurRadius: size.width * theme.responsiveTheme.s12Percent,
+                )
+              ],
               image: DecorationImage(
                 image: NetworkImage(imageUrl),
                 fit: BoxFit.cover,
