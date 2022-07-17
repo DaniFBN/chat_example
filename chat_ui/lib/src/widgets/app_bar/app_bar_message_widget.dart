@@ -40,7 +40,6 @@ class DwAppBarMessageWidget extends StatelessWidget
               boxShadow: [
                 BoxShadow(
                   color: theme.colorTheme.shadowImageColor,
-                  
                   blurRadius: size.width * theme.responsiveTheme.s12Percent,
                 )
               ],
