@@ -7,6 +7,9 @@ class DwTheme {
   const DwTheme._();
 
   static final darkTheme = ThemeData.dark().copyWith(
-    extensions: <ThemeExtension<IDwThemeData>>[const DwDarkThemeData()],
+    extensions: <ThemeExtension<IDwThemeData>>[
+      const DwDarkThemeData(),
+      
+    ],
   );
 }
