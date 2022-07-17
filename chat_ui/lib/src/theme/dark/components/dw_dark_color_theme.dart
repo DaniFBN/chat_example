@@ -15,6 +15,9 @@ class DwDarkColorTheme implements IDwColorTheme {
   Color get backgroundColor => const Color(0xFF1B202D);
 
   @override
+  Color get chatListBackgroundColor => const Color(0xFF292F3F);
+
+  @override
   Color get backgroundMyMessageColor => const Color(0xFF7A8194);
 
   @override
