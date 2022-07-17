@@ -22,46 +22,56 @@ class DwChatMenuItemWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context).extension<IDwThemeData>()!;
 
-    return Row(
-      children: [
-        Container(
-          height: size.width * theme.responsiveTheme.s52Percent,
-          width: size.width * theme.responsiveTheme.s52Percent,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: theme.colorTheme.shadowImageColor,
-                blurRadius: size.width * theme.responsiveTheme.s12Percent,
-              )
-            ],
-            image: DecorationImage(
-              image: NetworkImage(imageUrl),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-        SizedBox(width: size.width * theme.responsiveTheme.s16Percent),
-        Column(
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: size.width * theme.responsiveTheme.s24Percent,
+        vertical: size.width * theme.responsiveTheme.s12Percent,
+      ),
+      child: SizedBox(
+        height: size.width * theme.responsiveTheme.s52Percent,
+        child: Row(
           children: [
-            DwResponsiveTextWidget(
-              text: title,
-              style: theme.textStyleTheme.chatNameTextStyle,
+            Container(
+              height: size.width * theme.responsiveTheme.s52Percent,
+              width: size.width * theme.responsiveTheme.s52Percent,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: theme.colorTheme.shadowImageColor,
+                    blurRadius: size.width * theme.responsiveTheme.s12Percent,
+                  )
+                ],
+                image: DecorationImage(
+                  image: NetworkImage(imageUrl),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(width: size.width * theme.responsiveTheme.s16Percent),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  DwResponsiveTextWidget(
+                    text: title,
+                    style: theme.textStyleTheme.chatNameTextStyle,
+                  ),
+                  DwResponsiveTextWidget(
+                    text: description,
+                    style: theme.textStyleTheme.chatDescriptionTextStyle,
+                  ),
+                ],
+              ),
             ),
             DwResponsiveTextWidget(
-              text: description,
-              style: theme.textStyleTheme.chatDescriptionTextStyle,
+              text: messageHour,
+              style: theme.textStyleTheme.chatDateTextStyle,
             ),
           ],
         ),
-        Align(
-          alignment: Alignment.topRight,
-          child: DwResponsiveTextWidget(
-            text: messageHour,
-            style: theme.textStyleTheme.chatDateTextStyle,
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
