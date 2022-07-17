@@ -1,0 +1,29 @@
+name: UI - CI
+"on":
+  pull_request:
+    paths:
+      - 'chat_ui/**'
+    branches: 
+      - dev
+jobs:
+  web-ci:
+    runs-on: ubuntu-latest
+    env: 
+      working-directory: ./chat_ui
+    
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2.2.1 
+        with:
+          flutter-version: '3.0.5'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+        working-directory: '${{ env.working-directory }}'
+      - name: Run analyzes
+        run: flutter analyze
+        working-directory: '${{ env.working-directory }}'
+      # - name: Run test
+      #   run: flutter test
+      #   working-directory: '${{ env.working-directory }}'

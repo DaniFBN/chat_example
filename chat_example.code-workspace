@@ -4,5 +4,22 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "App",
+        "request": "launch",
+        "type": "dart",
+        "program": "chat_app/lib/main.dart"
+      },
+      {
+        "name": "UI Example",
+        "request": "launch",
+        "type": "dart",
+        "program": "chat_ui/example/lib/main.dart"
+      }
+    ]
+  }
 }
