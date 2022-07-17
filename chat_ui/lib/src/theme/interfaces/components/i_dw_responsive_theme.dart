@@ -17,6 +17,9 @@ abstract class IDwResponsiveTheme
   /// Percentage that represent 44
   double get s44Percent;
 
+  /// Percentage that represent 52
+  double get s52Percent;
+
   /// Percentage that represent 65
   double get s65Percent;
 

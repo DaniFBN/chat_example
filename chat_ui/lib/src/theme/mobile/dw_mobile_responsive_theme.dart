@@ -21,6 +21,9 @@ class DwMobileResponsiveTheme implements IDwResponsiveTheme {
   double get s44Percent => 0.102;
 
   @override
+  double get s52Percent => 0.121;
+
+  @override
   double get s65Percent => 0.151;
 
   @override
