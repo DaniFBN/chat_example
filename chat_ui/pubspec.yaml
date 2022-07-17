@@ -12,9 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
 
+    
+  chat_dependencies:
+    path: ../chat_dependencies
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
 
 flutter:

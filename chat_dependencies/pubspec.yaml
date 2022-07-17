@@ -15,10 +15,13 @@ dependencies:
   flutter_modular: ^5.0.3
   fpdart: ^0.2.0
 
+  ###
+  # Linter
+  ###
+  very_good_analysis: ^3.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  very_good_analysis: ^3.0.1
-
+    
 flutter:
