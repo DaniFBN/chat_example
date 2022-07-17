@@ -16,6 +16,7 @@ class DwResponsiveTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      overflow: TextOverflow.ellipsis,
       style: style.copyWith(
         fontSize: MediaQuery.of(context).widgetScale(style.fontSize ?? 14),
       ),
