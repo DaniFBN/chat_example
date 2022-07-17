@@ -1,16 +1,16 @@
-name: UI - CI
+name: Dependencies - CI
 "on":
   pull_request:
     branches: 
       - dev
     paths:
-      - 'chat_ui/**'
+      - 'chat_dependencies/**'
     
 jobs:
-  ui-ci:
+  dependencies-ci:
     runs-on: ubuntu-latest
     env: 
-      working-directory: ./chat_ui
+      working-directory: ./chat_dependencies
     
     steps:
       - uses: actions/checkout@v2
