@@ -6,8 +6,8 @@ import '../interfaces/i_dw_theme_data.dart';
 import 'components/dw_dark_color_theme.dart';
 import 'components/dw_dark_text_style_theme.dart';
 
-class DwDarkTheme implements IDwThemeData {
-  const DwDarkTheme();
+class DwDarkThemeData implements IDwThemeData {
+  const DwDarkThemeData();
 
   @override
   IDwColorTheme get colorTheme => const DwDarkColorTheme();
@@ -29,5 +29,5 @@ class DwDarkTheme implements IDwThemeData {
   }
 
   @override
-  Object get type => throw UnimplementedError();
+  Object get type => IDwThemeData;
 }
