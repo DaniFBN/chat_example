@@ -9,7 +9,7 @@ class AppBarHomePage extends StatelessWidget {
     return Scaffold(
       appBar: DwAppBarHomeWidget(
         searchController: TextEditingController(),
-        onTapSearch: () => print('Searched'),
+        onTapSearch: () => debugPrint('Searched'),
         title: 'Messages',
       ),
     );

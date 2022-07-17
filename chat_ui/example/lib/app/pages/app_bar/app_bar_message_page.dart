@@ -9,7 +9,7 @@ class AppBarMessagePage extends StatelessWidget {
     return Scaffold(
       appBar: DwAppBarMessageWidget(
         searchController: TextEditingController(),
-        onTapSearch: () => print('Searched'),
+        onTapSearch: () => debugPrint('Searched'),
         title: 'Daniel Fernandes',
         imageUrl: 'https://avatars.githubusercontent.com/u/54218517?v=4',
       ),

@@ -17,13 +17,13 @@ class MenuPage extends StatelessWidget {
           itemBuilder: (_, i) {
             final item = MenuData.items.elementAt(i);
 
-            return Container(
+            return ColoredBox(
               color: Theme.of(context).cardColor,
               child: ListTile(
                 title: Text(item.title),
                 onTap: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => item.page),
+                    MaterialPageRoute<Widget>(builder: (_) => item.page),
                   );
                 },
               ),
