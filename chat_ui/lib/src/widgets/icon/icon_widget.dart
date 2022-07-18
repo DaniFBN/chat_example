@@ -6,9 +6,11 @@ class DwIconWidget extends StatelessWidget {
   const DwIconWidget({
     super.key,
     required this.icon,
+    this.color,
   });
 
   final IconData icon;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class DwIconWidget extends StatelessWidget {
 
     return Icon(
       icon,
-      color: theme.colorTheme.appBarIconColor,
+      color: color ?? theme.colorTheme.appBarIconColor,
       size: size.width * theme.responsiveTheme.s24Percent,
     );
   }
