@@ -27,6 +27,11 @@ class DwDarkColorTheme implements IDwColorTheme {
   Color get sendMessageIconColor => const Color(0xFF9398A7);
 
   @override
+  Color get backgroundAttachImageColor => const Color(0xFF9398A7);
+  @override
+  Color get backgroundSendMessageColor => const Color(0xFF3D4354);
+
+  @override
   Color get statusBarColor => backgroundColor;
 
   @override

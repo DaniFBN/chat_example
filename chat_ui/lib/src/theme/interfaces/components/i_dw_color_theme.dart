@@ -25,6 +25,12 @@ abstract class IDwColorTheme extends ThemeExtension<IDwColorTheme> {
   /// Icon color to use in text field to attach an image
   Color get attachIconColor;
 
+  /// Color to use like background in text field to attach image
+  Color get backgroundAttachImageColor;
+
+  /// Color to use like background in text field
+  Color get backgroundSendMessageColor;
+
   /// Color to use like a shadow in app bar person image and image when listing
   /// chats
   Color get shadowImageColor;
