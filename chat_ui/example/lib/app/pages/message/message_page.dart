@@ -7,7 +7,7 @@ class MessagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Chat Menu Item')),
+      appBar: AppBar(title: const Text('Chat Message')),
       body: ListView.builder(
         itemBuilder: (_, i) {
           return DwMessageWidget(
