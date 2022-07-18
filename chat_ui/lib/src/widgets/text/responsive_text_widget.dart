@@ -8,17 +8,20 @@ class DwResponsiveTextWidget extends StatelessWidget {
     required this.text,
     required this.style,
     this.overflow,
+    this.textAlign,
   });
 
   final String text;
-  final TextOverflow? overflow;
   final TextStyle style;
+  final TextOverflow? overflow;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       overflow: overflow,
+      textAlign: textAlign,
       style: style.copyWith(
         fontSize: MediaQuery.of(context).widgetScale(style.fontSize ?? 14),
       ),

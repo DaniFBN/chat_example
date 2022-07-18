@@ -25,6 +25,11 @@ class DwMessageWidget extends StatelessWidget {
     return Alignment.centerLeft;
   }
 
+  TextAlign _handleTextAlign() {
+    if (isMyMessage) return TextAlign.end;
+    return TextAlign.start;
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -51,6 +56,7 @@ class DwMessageWidget extends StatelessWidget {
           ),
           child: DwResponsiveTextWidget(
             text: content,
+            textAlign: _handleTextAlign(),
             style: theme.textStyleTheme.messageContentTextStyle,
           ),
         ),
