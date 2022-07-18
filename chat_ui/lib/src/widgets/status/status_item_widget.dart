@@ -41,6 +41,7 @@ class DwStatusItemWidget extends StatelessWidget {
             SizedBox(height: size.width * theme.responsiveTheme.s16Percent),
             DwResponsiveTextWidget(
               text: userName,
+              overflow: TextOverflow.ellipsis,
               style: theme.textStyleTheme.statusPersonNameTextStyle,
             ),
           ],
