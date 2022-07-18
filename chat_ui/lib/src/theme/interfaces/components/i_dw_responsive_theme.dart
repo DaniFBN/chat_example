@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 abstract class IDwResponsiveTheme
     implements ThemeExtension<IDwResponsiveTheme> {
+  /// Percentage that represent 6
+  double get s6Percent;
+
   /// Percentage that represent 8
   double get s8Percent;
 
@@ -13,6 +16,9 @@ abstract class IDwResponsiveTheme
 
   /// Percentage that represent 24
   double get s24Percent;
+
+  /// Percentage that represent 32
+  double get s32Percent;
 
   /// Percentage that represent 44
   double get s44Percent;

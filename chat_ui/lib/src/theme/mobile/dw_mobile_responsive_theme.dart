@@ -6,6 +6,9 @@ class DwMobileResponsiveTheme implements IDwResponsiveTheme {
   const DwMobileResponsiveTheme();
 
   @override
+  double get s6Percent => 0.014;
+
+  @override
   double get s8Percent => 0.018;
 
   @override
@@ -16,6 +19,9 @@ class DwMobileResponsiveTheme implements IDwResponsiveTheme {
 
   @override
   double get s24Percent => 0.056;
+
+  @override
+  double get s32Percent => 0.074;
 
   @override
   double get s44Percent => 0.102;
