@@ -1,3 +1,4 @@
+import 'package:chat_core/chat_core.dart';
 import 'package:chat_ui/chat_ui.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +11,8 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chat UI - Example',
-      theme: DwTheme.darkTheme,
-      darkTheme: DwTheme.darkTheme,
+      theme: DwTheme.darkTheme(platformService: PlatformService()),
+      darkTheme: DwTheme.darkTheme(platformService: PlatformService()),
       home: const MenuPage(),
     );
   }
