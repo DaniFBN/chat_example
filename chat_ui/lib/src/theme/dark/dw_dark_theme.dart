@@ -1,5 +1,4 @@
-import 'dart:io';
-
+import 'package:chat_core/chat_core.dart';
 import 'package:flutter/material.dart';
 
 import '../interfaces/components/i_dw_color_theme.dart';
@@ -11,14 +10,18 @@ import 'components/dw_dark_color_theme.dart';
 import 'components/dw_dark_text_style_theme.dart';
 
 class DwDarkThemeData implements IDwThemeData {
-  const DwDarkThemeData();
+  const DwDarkThemeData({
+    required IPlatformService platformService,
+  }) : _platformService = platformService;
+
+  final IPlatformService _platformService;
 
   @override
   IDwColorTheme get colorTheme => const DwDarkColorTheme();
 
   @override
   IDwResponsiveTheme get responsiveTheme {
-    if (Platform.isAndroid || Platform.isIOS) {
+    if (_platformService.isAndroid || _platformService.isIOS) {
       return const DwMobileResponsiveTheme();
     }
 
